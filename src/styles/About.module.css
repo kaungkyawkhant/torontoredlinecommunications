@@ -1,0 +1,70 @@
+.about {
+  background: var(--color-bg);
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.topGrid p + p {
+  margin-top: var(--space-sm);
+}
+
+.highlightGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm);
+}
+
+.highlightCard {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 8px;
+  padding: var(--space-md);
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.highlightCard svg {
+  color: var(--color-accent-gold);
+}
+
+.highlightCard p {
+  color: var(--color-text-primary);
+  font-size: var(--text-small);
+}
+
+.pillars {
+  margin-top: var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.pillarCard {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 8px;
+  padding: var(--space-md);
+}
+
+.pillarCard h3 {
+  color: var(--color-red);
+  margin-bottom: var(--space-xs);
+}
+
+.pillarCard p {
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+  .topGrid {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .pillars {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

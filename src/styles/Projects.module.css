@@ -1,0 +1,73 @@
+.projects {
+  background: var(--color-bg);
+}
+
+.header {
+  max-width: 780px;
+  margin-bottom: var(--space-lg);
+}
+
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 1fr);
+  overflow-x: auto;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-xs);
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: 8px;
+  padding: var(--space-md);
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.sector {
+  width: fit-content;
+  background: rgba(204, 26, 26, 0.2);
+  color: var(--color-red);
+  border: 1px solid rgba(204, 26, 26, 0.4);
+  border-radius: 999px;
+  padding: 0.16rem 0.55rem;
+  font-size: var(--text-caption);
+  letter-spacing: 0.1em;
+}
+
+.card h3 {
+  color: var(--color-text-primary);
+}
+
+.card dl {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.card dt {
+  color: var(--color-accent-gold);
+  font-size: var(--text-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card dd {
+  color: var(--color-text-muted);
+  font-size: var(--text-small);
+}
+
+.disclaimer {
+  margin-top: var(--space-md);
+  color: var(--color-text-muted);
+  font-size: var(--text-caption);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-auto-flow: unset;
+    grid-auto-columns: unset;
+    overflow: visible;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

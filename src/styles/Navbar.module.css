@@ -1,0 +1,132 @@
+.navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 1000;
+  border-bottom: 1px solid transparent;
+  background: rgba(10, 12, 16, 0.98);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.scrolled {
+  background: rgba(10, 12, 16, 0.8);
+  border-color: var(--color-border);
+  backdrop-filter: blur(10px);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 72px;
+  padding: 0 var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.logoTop {
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  color: var(--color-text-muted);
+}
+
+.logoMiddle {
+  font-family: var(--font-display);
+  color: var(--color-red);
+  letter-spacing: 0.25em;
+  font-size: 1.3rem;
+  font-weight: var(--weight-bold);
+}
+
+.logoBottom {
+  font-size: 0.54rem;
+  letter-spacing: 0.2em;
+  color: var(--color-text-muted);
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.navLink,
+.mobileLink {
+  color: var(--color-text-primary);
+  font-size: var(--text-small);
+  transition: color 0.2s ease;
+}
+
+.navLink:hover,
+.mobileLink:hover,
+.active {
+  color: var(--color-red);
+}
+
+.cta,
+.mobileCta {
+  background: var(--color-red);
+  color: var(--color-white);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  transition: background 0.2s ease;
+}
+
+.cta:hover,
+.mobileCta:hover {
+  background: var(--color-red-hover);
+}
+
+.mobileToggle {
+  color: var(--color-text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileDrawer {
+  display: grid;
+  gap: var(--space-sm);
+  max-height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid transparent;
+  background: rgba(10, 12, 16, 0.98);
+  transition: max-height 0.25s ease;
+  padding: 0 var(--space-lg);
+}
+
+.mobileOpen {
+  max-height: 360px;
+  border-color: var(--color-border);
+  padding: var(--space-sm) var(--space-lg) var(--space-md);
+}
+
+.mobileLink,
+.mobileCta {
+  justify-self: start;
+}
+
+@media (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .mobileToggle,
+  .mobileDrawer {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 var(--space-sm);
+  }
+}

@@ -1,0 +1,44 @@
+.services {
+  background: var(--color-surface-alt);
+}
+
+.header {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header .signal-divider {
+  justify-content: center;
+}
+
+.grid {
+  margin-top: var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-sm);
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-left: 3px solid transparent;
+  background: var(--color-surface);
+  border-radius: 8px;
+  padding: var(--space-md);
+  display: grid;
+  gap: var(--space-xs);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-left-color: var(--color-red);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card svg {
+  color: var(--color-accent-gold);
+}
+
+.card h3 {
+  color: var(--color-text-primary);
+}
